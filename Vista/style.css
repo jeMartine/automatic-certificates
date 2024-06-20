@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('fuente/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('fuente/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('fuente/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-italic';
+    src: url('fuente/Poppins/Poppins-MediumItalic.ttf');
+}
+
+
+p{
+    margin: 0;
+}
+
+.nombrePersona{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.numDoc{
+    font-family: 'poppins-medium';
+    font-size: 20px;
+}
+
+.TextIglesias{
+    font-family: 'poppins-italic';
+    margin-bottom: 30px
+}
+
+.Secretario, .nombrePadre{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.nombrePadre{
+    font-family: 'poppins-medium';
+}
+
+.textFecha{
+    font-size: 18px;
+}
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: 'poppins-regular';
+    font-size: 25px;
+    background-color: white;
+}
+
+.esquinaIzquierda, .esquinaDerecha{
+    width: 250px;
+    height: auto;
+}
+
+.esquinaIzquierda {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.esquinaDerecha {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:rotateY(180deg);
+}
+
+.escudo{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: auto;
+}
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.tabla td{
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px;
+    position: relative;
+}
+
+.padreSecretario {
+    border-top: 2px solid black;
+    max-width: 40%;
+    margin: 0 auto; /* Para centrar horizontalmente */
+    text-align: center; /* Para centrar el contenido */
+}
+
+.firmaPadre {
+    margin-top: 50px;
+    width: 300px;
+    height: auto;
+    display: block; /* Asegurar que ocupe todo el ancho del contenedor */
+    margin-left: auto; /* Centrar la imagen */
+    margin-right: auto; /* Centrar la imagen */
+}
+.logoAuspicio{
+    width: 150px;
+    height: auto;
+}
+
+.culturaCuidado{
+    width: 150px;
+    height: auto;
+}
+.textFooter{
+    font-size: 12px;
+    text-align: center;
+}
