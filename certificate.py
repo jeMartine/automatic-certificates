@@ -10,8 +10,7 @@ config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
 
 options = {
     'enable-local-file-access': None,  # Necesario para que wkhtmltopdf pueda acceder a archivos locales
-    'page-height': '300mm',
-    'page-width': '226mm',
+    'page-size': 'A4',
     'orientation': 'Landscape',
     'encoding': 'UTF-8',
     'margin-top': '0in',
@@ -19,7 +18,6 @@ options = {
     'margin-bottom': '0in',
     'margin-left': '0in',
     'no-outline': None,
-    'footer-line': False  # Eliminar la línea de pie de página
 }
 
 # Pone en mayuscula la primera letra de cada palabra
@@ -29,6 +27,10 @@ def capitalizar_palabras(cadena):
 if not os.path.exists('vista/temp'):
     os.makedirs('vista/temp')
     print('Carpeta temporal')
+
+if not os.path.exists('formulario'):
+    os.makedirs('formulario')
+    print('Carpeta formulario')
 
 def carpetaSalida():
     if not os.path.exists('salida'):
@@ -103,6 +105,8 @@ if __name__ == "__main__":
     if len(sys.argv)<2:
         print("recuerde: python certificate.py nombreArchvio.xlsx")
     else:
+        rutaExcel = f'formulario/'+ sys.argv[1]
+        print(rutaExcel)
         carpetaSalida()
-        generarPDF(leerExcel(sys.argv[1]))
+        generarPDF(leerExcel(rutaExcel))
         

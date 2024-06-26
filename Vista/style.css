@@ -37,7 +37,7 @@ p{
 
 .TextIglesias{
     font-family: 'poppins-italic';
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .Secretario, .nombrePadre{
@@ -55,7 +55,7 @@ p{
 body {
     margin: 0 auto;
     width: 15in;
-    height: 10in;
+    height: 8,72in;
     position: absolute;
     font-family: 'poppins-regular';
     font-size: 25px;
@@ -81,8 +81,8 @@ body {
 }
 
 .escudo{
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     width: 300px;
     height: auto;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .firmaPadre {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 1px;
     width: 300px;
     height: auto;
@@ -117,12 +117,12 @@ body {
     margin-right: auto; /* Centrar la imagen */
 }
 .logoAuspicio{
-    width: 150px;
+    width: 130px;
     height: auto;
 }
 
 .culturaCuidado{
-    width: 150px;
+    width: 130px;
     height: auto;
 }
 .textFooter{
