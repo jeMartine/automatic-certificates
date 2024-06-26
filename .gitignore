@@ -1,3 +1,4 @@
 *.xlsx
 /vista/temp/
 /salida/
+*.pdf
