@@ -21,11 +21,18 @@
 
 p{
     margin: 0;
+    color: #1b1b1b;
 }
+
+.participacion p {
+    color: #1b1b1b;
+    margin: 0;
+    line-height: 1.2;
+}   
 
 .nombrePersona{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 45px;
+    font-size: 47px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -35,14 +42,14 @@ p{
     font-size: 20px;
 }
 
-.TextIglesias{
-    font-family: 'poppins-italic';
-    margin-bottom: 30px;
+.jurisdiccion{
+    font-family: 'poppins-medium';
+    font-size: 23px;
 }
 
-.Secretario, .nombrePadre{
-    font-size: 16px;
-    margin: 0px;
+.textParticipacion{
+    font-family: 'poppins-medium';
+    font-size: 20px;
 }
 
 .nombrePadre{
@@ -52,18 +59,45 @@ p{
 .textFecha{
     font-size: 18px;
 }
+
+.TextIglesias{
+    font-family: 'poppins-italic';
+}
+
+.Secretario, .nombrePadre{
+    font-size: 16px;
+    margin: 0px;
+}
+
+
+.tabla tr:last-child {
+    height: 100%;
+}
+
+
+
 body {
     margin: 0 auto;
     width: 15in;
-    height: 8,72in;
-    position: absolute;
+    height: 8.72in;
     font-family: 'poppins-regular';
     font-size: 25px;
     background-color: white;
 }
 
+.contenedor {
+    width: 100%;
+    height: 100%;
+}
+
+
+.tabla {
+    height: 100%;
+}
+
+
 .esquinaIzquierda, .esquinaDerecha{
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
@@ -100,32 +134,82 @@ body {
     position: relative;
 }
 
-.padreSecretario {
-    border-top: 2px solid black;
-    max-width: 40%;
-    margin: 0 auto; /* Para centrar horizontalmente */
-    text-align: center; /* Para centrar el contenido */
-}
-
 .firmaPadre {
-    margin-top: 30px;
-    margin-bottom: 1px;
+    margin: 0px;
     width: 300px;
     height: auto;
     display: block; /* Asegurar que ocupe todo el ancho del contenedor */
-    margin-left: auto; /* Centrar la imagen */
-    margin-right: auto; /* Centrar la imagen */
-}
-.logoAuspicio{
-    width: 130px;
-    height: auto;
+    margin-left: 10px;
 }
 
-.culturaCuidado{
-    width: 130px;
+.logoAuspicio,
+.culturaCuidado {
+    width: 150px;
     height: auto;
+    margin: 0;
+    display: block;
 }
+
+.imgInferior{
+    width: 70px;
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+
 .textFooter{
     font-size: 12px;
     text-align: center;
+}
+
+
+.firmas {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.padreSecretario {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cruz-firma {
+    text-align: center;
+}
+
+.cruz-firma img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cruz{
+    width: 25px;
+    height: auto;
+    margin:0;
+}
+
+.logos_fechas {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+}
+
+.logos_fechas > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.participacion {
+    width: 70%;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
 }

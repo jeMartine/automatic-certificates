@@ -10,7 +10,7 @@
 <body>
     <div class="contenedor">
         <table class="tabla">
-            <tr>
+            <tr class="encabezado">
                 <td>
                     <img class="esquinaIzquierda" src="../Imagenes/disehnoEsquina.png">
                 </td>
@@ -20,31 +20,55 @@
                     <p class="nombrePersona">{{persona}}</p>
                     <p class="numDoc">Identificado(a) con {{documento}}</p>
                     <p class="numDoc">{{numeroDocumento}}</p>
-                    <p style="margin-top: 20px; margin-bottom: 10px">Participó en:</p>
-                    <p class="textParticipacion">{{participacion}}</p>
-                    <p class="TextIglesias">{{iglesias}}</p>
-                    <p class="textFecha">{{dias}} de {{mes}} de {{ahno}}, con una duración de {{horas}}</p>
-                    <p class="textFecha">{{ciudad}}, {{departamento}}</p>
 
-                    <img class="firmaPadre" src="../Imagenes/firmaPadre.png">
-                    <div class="padreSecretario">
-                        <p class="nombrePadre">Padre Jorge Enrique Bustamante</p>
-                        <p class="Secretario">Secretario General Conferencia Episcopal de Colombia</p>
+                    <p class="jurisdiccion">De la Jurisdicción Eclesiástica de</p>
+                    <p class="jurisdiccion">{{jurisdiccion}}</p>
+
+                    <div class="logos_fechas">
+                        <img class="logoAuspicio" src="../Imagenes/logoAuspicio.png">
+
+                         <div class="participacion">
+                            <p class="textParticipacion">Participó en:</p>
+                            <p>{{participacion}}</p>
+        
+                            <p class="TextIglesias">{{iglesias}}</p>
+        
+                            <p class="textFecha">{{dias}} de {{mes}} de {{ahno}}, con una duración de {{horas}} horas</p>
+                            <p class="textFecha">{{ciudad}}, {{departamento}}</p>
+                         </div>   
+
+                        <img class="culturaCuidado" src="../Imagenes/culturaCuidado.png">
+
                     </div>
+
+                    <div class ="firmas">
+                        <div class="padreSecretario">
+                            <div class="cruz-firma">
+                                <img class="cruz" src="../Imagenes/cruz.png">
+                                <img class="firmaPadre" src="../Imagenes/firmaGerman.png">
+                            </div>
+                            <p class="nombrePadre">S.E.R. Mons. Germán Medina Acosta</p>
+                            <p class="Secretario">Secretario General de la Conferencia Episcopal de Colombia</p>
+                        </div>
+
+                        <div class="padreSecretario">
+                            <div class="cruz-firma">
+                                <img class="cruz" src="../Imagenes/cruz.png">
+                                <img class="firmaPadre" src="../Imagenes/firmaGerman.png">
+                            </div>
+                            <p class="nombrePadre">S.E.R. Mons. Nelson Jair Cardona Ramírez</p>
+                            <p class="Secretario">Presidente de la Comisión Episcopal para la Cultura del Cuidado</p>
+                        </div>
+                    </div>
+                    
                 </td>
                 <td>
                     <img class="esquinaDerecha" src="../Imagenes/disehnoEsquinaDerecha.png">
                 </td>
             </tr>
-        </table>
-    </div>
-
-    <!-- Pie de página -->
-    <div class="footer">
-        <table class="tableFooter">
             <tr>
                 <td>
-                    <img class="logoAuspicio" src="../Imagenes/logoAuspicio.png">
+                    <img class="imgInferior" src="../Imagenes/diseno_inf_izq.png">
                 </td>
                 <td>
                     <p class="textFooter">La autenticidad del documento puede ser verificada mediante la solicitud al
@@ -56,11 +80,12 @@
                         para el trabajo con niñas, niños, adolescentes y personas vulnerables</p>
                 </td>
                 <td>
-                    <img class="culturaCuidado" src="../Imagenes/culturaCuidado.png">
+                    <img class="imgInferior" src="../Imagenes/diseno_inf_der.png">
                 </td>
             </tr>
         </table>
     </div>
+
 </body>
 
 </html>

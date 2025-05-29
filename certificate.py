@@ -3,6 +3,7 @@ import pandas as pd
 from jinja2 import FileSystemLoader, Environment
 import os
 import pdfkit
+import time
 
 # Configurar la ruta de wkhtmltopdf
 path_wkhtmltopdf = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'  # Actualiza esta ruta según tu instalación
@@ -54,12 +55,17 @@ def generarPDF(df):
     personas = df["Nombre y apellidos completos"]
     tipoDocumento = df["Tipo de documento de identidad"]
     documento = df["Número de documento de identidad"]
+    lugar =df["Lugar"]
+    horas = df["Horas certificadas"]
 
     for i in range(len(personas)):
         if tipoDocumento[i] == "Cédula de ciudadanía":
             tipo_documento_abreviado = "C.C."
-        else:
-            tipo_documento_abreviado = tipoDocumento[i]
+        else: 
+            if tipoDocumento[i] == "Pasaporte":
+                tipo_documento_abreviado = "PA"
+            else: 
+                tipo_documento_abreviado = tipoDocumento[i]
 
         # Convertir documento[i] a cadena antes de pasar a agregar_puntos()
         numero_documento_str = str(documento[i])
@@ -71,12 +77,13 @@ def generarPDF(df):
             numeroDocumento = agregar_puntos(numero_documento_str),
             participacion = "Jornadas de capacitación en Provincias Eclesiásticas",
             iglesias = "Iglesias Particulares Seguras y Protectoras",
-            dias ="19, 20 y 21",
+            dias ="12, 13 y 14",
             mes = "Junio",
             ahno ="2024",
-            horas = "25 horas",
-            ciudad = "Barranquilla",
-            departamento= "Atlántico",
+            horas = horas[i],
+            ciudad = "Duitama",
+            departamento= "Boyacá",
+            jurisdiccion = "prueba",
         )
 
         # Generar el html temporal
@@ -84,12 +91,17 @@ def generarPDF(df):
             f.write(html_content)
             print(f'creado vista/temp/temp_{personas[i]}.html')
 
+        carpetaLugar(lugar[i])
         ruta_leer = f'vista/temp/temp_{personas[i]}.html'
-        ruta_salida = f'salida/{personas[i]}.pdf'
-
+        ruta_salida = f'salida/{lugar[i]}/{personas[i]}.pdf'
+        
         # Generar el archivo pdf del html
         pdfkit.from_file(ruta_leer, output_path=ruta_salida, configuration=config, options=options)
         print(f'pdf generado {personas[i]}')
+
+def carpetaLugar(lugar):
+    if not os.path.exists(f'salida/{lugar}'):
+        os.makedirs(f'salida/{lugar}')
 
 def agregar_puntos(cadena):
     n = len(cadena)
