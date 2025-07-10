@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('fuente/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('fuente/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('fuente/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-italic';
+    src: url('fuente/Poppins/Poppins-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'yesevaone';
+    src: url('fuente/Yeseva_One/YesevaOne-Regular.ttf') format('truetype');
+}
+
+p{
+    margin: 0;
+    color: #1b1b1b;
+}
+
+.participacion p {
+    color: #1b1b1b;
+    margin: 0;
+}   
+
+.nombrePersona{
+    font-family: 'yesevaone';
+    font-size: 47px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.numDoc{
+    font-family: 'poppins-medium';
+    font-size: 20px;
+}
+
+
+.jurisdiccion{
+    font-family: 'poppins-medium';
+    font-size: 23px;
+}
+
+.jurisdiccionNombre{
+    font-family: 'yesevaone';
+    font-size: 23px;
+}
+
+.textParticipacion{
+    font-family: 'poppins-medium';
+    font-size: 20px;
+}
+
+.nombrePadre{
+    font-family: 'poppins-medium';
+}
+
+.textFecha{
+    font-size: 18px;
+}
+
+.TextIglesias{
+    font-family: 'poppins-italic';
+}
+
+.Secretario, .nombrePadre{
+    font-size: 16px;
+    margin: 0px;
+}
+
+
+.tabla tr:last-child {
+    height: 100%;
+}
+
+
+
+body {
+    margin: 0 auto;
+    width: 15in;
+    height: 8.72in;
+    font-family: 'poppins-regular';
+    font-size: 25px;
+    background-color: white;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+}
+
+
+.tabla {
+    height: 100%;
+}
+
+
+.esquinaIzquierda, .esquinaDerecha{
+    width: 200px;
+    height: auto;
+}
+
+.esquinaIzquierda {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.esquinaDerecha {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:rotateY(180deg);
+}
+
+.escudo{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+}
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.tabla td{
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px;
+    position: relative;
+}
+
+.firmaPadre {
+    margin: 0px;
+    width: 300px;
+    height: auto;
+    display: block; /* Asegurar que ocupe todo el ancho del contenedor */
+    margin-left: 10px;
+}
+
+.logoAuspicio,
+.culturaCuidado {
+    width: 150px;
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+.logoAuspicio{
+    margin-left: 50px;
+}
+
+.imgInferior{
+    width: 70px;
+    height: auto;
+    margin: 0;
+    display: block;
+}
+
+
+.textFooter{
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.firmas {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.padreSecretario {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cruz-firma {
+    text-align: center;
+}
+
+.cruz-firma img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cruz{
+    width: 25px;
+    height: auto;
+    margin:0;
+}
+
+.logos_fechas {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.logos_fechas > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.participacion {
+    width: 70%;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+}

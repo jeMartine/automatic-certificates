@@ -1,0 +1,12 @@
+personas: Nombre Y Apellidos
+tipoDocumento: Documento De Identidad
+documento: Número
+horas: Horas
+jurisdiccion: Jurisdicción Eclesiástica
+participacion: Jornadas de capacitación en Provincias Eclesiásticas
+iglesias: Iglesias Particulares Seguras y Protectoras
+dias: 03, 04 y 05
+mes: abril
+ahno: 2025
+ciudad: Soacha
+departamento: no
